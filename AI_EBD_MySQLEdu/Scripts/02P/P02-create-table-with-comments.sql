@@ -36,6 +36,8 @@ CREATE TABLE user_profiles (
     country VARCHAR(100),
     occupation VARCHAR(100)
 );
+
+
 ALTER TABLE user_profiles
 COMMENT 'Table containing user profiles information';
 
@@ -66,3 +68,28 @@ VALUES
 ;
 
 SELECT * FROM user_profiles;
+
+UPDATE user_profiles
+SET occupation = 'Senior Software Engineer'
+WHERE city = 'New York';
+
+UPDATE user_profiles
+SET phone_number = '1231231234'
+WHERE first_name = 'Emily' AND last_name = 'Wilson';
+
+DELETE FROM user_profiles
+WHERE user_id = '5c18f12e-4fd2-4ae9-8157-20e40d95f82d';
+
+DELETE FROM user_profiles
+WHERE email LIKE '%@example.com';
+
+-- ROLLBACK;
+
+DELETE FROM user_profiles;
+
+TRUNCATE TABLE user_profiles;
+
+DROP TABLE user_profiles;
+
+
+
