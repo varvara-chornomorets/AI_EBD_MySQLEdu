@@ -1,0 +1,7 @@
+-- P02
+
+CREATE DATABASE P02;
+
+USE P02;
+
+
